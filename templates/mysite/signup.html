@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="ko">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>login</title>
+    <title>signup</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
     <!-- Core theme CSS (includes Bootstrap)-->
@@ -21,10 +22,15 @@
 </nav>
 <div class="container px-4 px-lg-5">
     <ul>
-        <li><input type="text" id="loginId" placeholder="ID"></li>
-        <li><input type="password" id="loginPassword" placeholder="PASSWORD"></li>
+        <li>아이디 <span class="text_danger">*</span><input type="text" id="signUpId">
+          <button> 중복확인 </button>
+        </li>
+        <li>비밀번호 <span class="text_danger">*</span><input type="password" id="signUpPassword1"></li>
+        <li>비밀번호 확인 <span class="text_danger">*</span><input type="password" id="signUpPassword2"></li>
+        <li>닉네임<span class="text_danger">*</span><input type="text" id="nickname"></li>
+        <li>주소<span class="text_danger">*</span><input type="text" id="address"></li>
+        <li>사이즈<input type="text" id="size"></li>
         <li>
-            <button type="submit">로그인</button>
             <button type="button">회원가입</button>
         </li>
     </ul>
