@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import MainContent
 
 
@@ -20,8 +20,11 @@ def signup(request):
     return render(request, 'mysite/signup.html')
 
 
-def productDetail(request):
-    return render(request, 'mysite/productDetail.html')
+def detail(request, content_id):
+    content_list = get_object_or_404(MainContent, pk=content_id)
+    context = {'content_list': content_list}
+    return render(request, 'mysite/productDetail.html', context)
+
 
 def mypage(request):
     return render(request, 'mysite/mypage.html')

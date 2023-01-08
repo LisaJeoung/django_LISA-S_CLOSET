@@ -21,6 +21,6 @@ urlpatterns = [
     path('aboutCompany/', views.aboutCompany),
     path('login/', views.login),
     path('signup/', views.signup),
-    path('detail/', views.productDetail),
+    path('<int:content_id>/', views.detail, name='detail'),
     path('mypage/', views.mypage),
 ]
