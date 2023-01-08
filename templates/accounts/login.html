@@ -24,10 +24,13 @@
         </tr>
         <tr>
             <td><input type="submit" value="login"></td>
-            <td><button type="button">회원가입</button></td>
+            <td>
+                <button type="button" onclick="location.href='{% url 'accounts:signup' %}'">회원가입</button>
+            </td>
         </tr>
     </table>
 </form>
+
 {% endblock %}
 
 </body>

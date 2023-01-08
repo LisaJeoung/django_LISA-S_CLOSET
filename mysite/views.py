@@ -12,14 +12,6 @@ def aboutCompany(request):
     return render(request, 'mysite/aboutCompany.html')
 
 
-def login(request):
-    return render(request, 'mysite/login.html')
-
-
-def signup(request):
-    return render(request, 'mysite/signup.html')
-
-
 def detail(request, content_id):
     content_list = get_object_or_404(MainContent, pk=content_id)
     context = {'content_list': content_list}

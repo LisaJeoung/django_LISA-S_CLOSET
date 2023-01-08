@@ -19,8 +19,6 @@ from . import views
 urlpatterns = [
     path('', views.index),
     path('aboutCompany/', views.aboutCompany),
-    path('login/', views.login),
-    path('signup/', views.signup),
     path('<int:content_id>/', views.detail, name='detail'),
     path('mypage/', views.mypage),
 ]
