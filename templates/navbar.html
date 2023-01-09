@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <meta name="description" content=""/>
     <meta name="author" content=""/>
-    <title>details</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
     <!-- Core theme CSS (includes Bootstrap)-->
@@ -18,7 +17,7 @@
     <div class="container px-5">
         <div class="collapse navbar-collapse" id="navbarSupportedContent1">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">신상품</a></li>
+                <li class="nav-item"><a class="nav-link" href="#!">신상품</a></li>
                 <li class="nav-item"><a class="nav-link" href="#!">아우터</a></li>
                 <li class="nav-item"><a class="nav-link" href="#!">상의</a></li>
                 <li class="nav-item"><a class="nav-link" href="#!">팬츠</a></li>
@@ -32,27 +31,19 @@
                 class="navbar-toggler-icon"></span></button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent2">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="#!">회사소개</a></li>
+                <li class="nav-item"><a class="nav-link" aria-current="page" href="#!">회사소개</a></li>
                 <li class="nav-item"><a class="nav-link" href="#!">게시판</a></li>
-                <li class="nav-item"><a class="nav-link" href="#!">로그인</a></li>
+                {% if user.is_authenticated %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'accounts:logout' %}">로그아웃</a></li>
+                {% else %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'accounts:login' %}">로그인</a></li>
+                {% endif %}
+
                 <li class="nav-item"><a class="nav-link" href="#!">회원가입</a></li>
                 <li class="nav-item"><a class="nav-link" href="#!">마이페이지</a></li>
             </ul>
         </div>
     </div>
 </nav>
-<img>
-<div>
-    <b>긴팔 니트</b><br>
-    <p>39000</p>
-</div>
-<div>
-    <ul>
-        <li>사이즈    S  <b>M</b>  L</li>
-        <li>색상     <b>핑크</b>  그린  블랙</li>
-        <li>수량   <button>-</button> 1 <button>+</button></li>
-    </ul>
-    <button type="submit">장바구니 담기</button>
-</div>
 </body>
 </html>

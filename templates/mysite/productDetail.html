@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>details</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico"/>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container px-4 px-lg-5">
+    <img src="/static/images/longkneet.png">
+    <h2>{{content_list.title}} </h2>
+    <div>
+        {{content_list.content}}
+    </div>
+    <div>
+        <b>긴팔 니트</b><br>
+        <p>39000</p>
+    </div>
+    <div>
+        <ul>
+            <li>사이즈 S <b>M</b> L</li>
+            <li>색상 <b>핑크</b> 그린 블랙</li>
+            <li>수량
+                <button>-</button>
+                1
+                <button>+</button>
+            </li>
+        </ul>
+        <button type="submit">장바구니 담기</button>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <title>MyPage</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container px-4 px-lg-5">
+    <span>회원정보</span>
+    <div>
+        <b>아이디</b><span>lisa1234</span><br>
+        <b>닉네임</b><span>nickname</span><br>
+        <b>주소</b><span>서울시 송파구 신천동</span><br>
+        <b>사이즈</b><span>상의 : M   하의 : S</span><br>
+    </div>
+    <span>장바구니</span>
+    <div>
+        <div><input type="checkbox"><img>
+            <b>긴팔니트</b><br>
+            색상:핑크<br>
+            사이즈:M<br>
+            수량:1
+        </div>
+        <div><input type="checkbox"><img>
+            <b>숏패딩</b><br>
+            색상:그레이<br>
+            사이즈:M<br>
+            수량:1
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>
